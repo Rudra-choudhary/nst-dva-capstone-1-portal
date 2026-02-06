@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Visualization & Analytics | Capstone 1</title>
+  <meta name="description" content="Capstone 1 resource hub for Data Visualization & Analytics students.">
+  <meta name="theme-color" content="#0f4c97">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/nst-shield-logo.png?v=3">
+  <link rel="shortcut icon" type="image/png" sizes="48x48" href="assets/nst-shield-logo.png?v=3">
+  <link rel="apple-touch-icon" href="assets/nst-shield-logo.png?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="backdrop" aria-hidden="true"></div>
+  <div class="ambient" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+    <span class="mesh"></span>
+  </div>
+
+  <header class="site-nav">
+    <div class="nav-wrap">
+      <a class="nav-brand" href="#top" aria-label="Back to top">
+        <img class="brand-logo" src="assets/newton-logo.png" alt="Newton School of Technology">
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#context">Overview</a>
+        <a href="#registration">Registration</a>
+        <a href="#documents">Documents</a>
+        <a href="#sections">Sections</a>
+        <a href="#ready-check">Readiness</a>
+      </nav>
+      <button class="command-btn" id="open-palette" type="button">Command Bar <kbd>Ctrl</kbd><kbd>K</kbd></button>
+    </div>
+  </header>
+
+  <main class="page" id="top">
+    <header class="hero">
+      <div class="hero-top">
+        <div class="partner-lockup" aria-label="Newton School of Technology">
+          <span class="partner-label">Newton School of Technology</span>
+        </div>
+        <p class="term">Batch Resource Hub</p>
+      </div>
+
+      <p class="eyebrow">DVA (Data Visualization &amp; Analytics) Course</p>
+      <h1>Capstone 1 <span>Command Center</span></h1>
+      <p class="subtitle">
+        Designed as an industry-grade project workspace for student teams to go from raw datasets to decision-ready insights.
+      </p>
+
+      <div class="hero-grid">
+        <article class="hero-panel">
+          <h3>Built For Execution</h3>
+          <p>Track readiness, search resources instantly, and keep every capstone asset in one place.</p>
+          <div class="panel-tags">
+            <span>Google Sheets first</span>
+            <span>Insight-driven grading</span>
+            <span>Industry simulation</span>
+          </div>
+        </article>
+        <article class="hero-panel hero-panel-strong">
+          <h3>Today&apos;s Focus</h3>
+          <p id="focus-text">Finalize your team problem statement and shortlist your first dataset candidate.</p>
+          <button class="focus-btn" id="focus-btn" type="button">Generate new focus</button>
+        </article>
+      </div>
+    </header>
+
+    <section class="card reveal context-card" id="context" data-section>
+      <div class="card-head">
+        <h2>Introduction to Capstone Projects</h2>
+        <p class="lead">Policy + Rules + Structure</p>
+      </div>
+
+      <details class="context-toggle" open>
+        <summary>Capstone Introduction</summary>
+        <div class="context-copy">
+          <p>
+            This capstone project is designed as an industry style data analytics simulation where student teams solve
+            real world sectoral problems using structured data. The objective is to demonstrate end-to-end analytical capability,
+            not just tool usage or visualization skills. Teams are expected to think like professional analysts and convert
+            raw data into decision oriented insights.
+          </p>
+          <p>
+            Each team will select a sector and a problem statement, then execute a complete analytics workflow that includes
+            data understanding, cleaning, standardization, KPI design, exploratory analysis (trends/outliers),
+            statistical analysis (correlation, distribution, variability), dashboard creation, and recommendation building.
+            The final output should clearly demonstrate structured thinking, analytical depth, and decision relevance.
+          </p>
+          <p>
+            This capstone is part of the Data Visualization course. Therefore, Google Sheets is the mandatory working platform
+            for cleaning, analysis, and dashboard creation.
+          </p>
+          <p>
+            Dashboarding Extension: While the primary analysis must be performed in Google Sheets, teams are permitted
+            (and encouraged) to use Looker Studio for the final dashboard layer to demonstrate advanced visualization
+            capabilities. However, the underlying data preparation and cleaning logic must remain visible in the Master
+            Google Sheet.
+          </p>
+          <p>
+            Optional Support: Students may use Python for supporting analysis (e.g., complex statistical grouping), but
+            it is not mandatory. SQL is not required. Evaluation will focus on analytical thinking and Google Sheets mastery,
+            not on tool complexity.
+          </p>
+        </div>
+      </details>
+
+      <div class="highlights" aria-label="Capstone focus">
+        <article>
+          <h3>Mandatory Tool</h3>
+          <p>Google Sheets for data cleaning, analysis, and dashboarding.</p>
+        </article>
+        <article>
+          <h3>Evaluation Focus</h3>
+          <p>Insight quality, analytical structure, and recommendation strength.</p>
+        </article>
+        <article>
+          <h3>Optional Support</h3>
+          <p>Python/SQL can support work but are not mandatory for grading.</p>
+        </article>
+      </div>
+
+      <div class="workflow">
+        <h3>Capstone Workflow</h3>
+        <ol>
+          <li><strong>Define</strong><span>Select sector, define problem statement.</span></li>
+          <li><strong>Prepare</strong><span>Clean and standardize data in Google Sheets.</span></li>
+          <li><strong>Analyze</strong><span>Trends, outliers, distribution and correlation analysis.</span></li>
+          <li><strong>Visualize</strong><span>Build dashboards and storytelling views.</span></li>
+          <li><strong>Recommend</strong><span>Deliver actionable business recommendations.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="card reveal registration-card" id="registration" data-section>
+      <div class="card-head">
+        <h2>Capstone Registration</h2>
+        <p class="help">Register your team before starting document submissions.</p>
+      </div>
+      <a class="register-btn" href="https://forms.google.com/" target="_blank" rel="noopener noreferrer">
+        Register via Google Form
+      </a>
+      <p class="tiny-note">
+        Replace this placeholder link in <code>index.html</code> with your actual Google Form URL.
+      </p>
+    </section>
+
+    <section class="card reveal" id="documents" data-section>
+      <div class="card-head">
+        <h2>Important Documents</h2>
+        <p class="help">Filter, search, and star your frequently used resources.</p>
+      </div>
+
+      <div class="doc-toolbar">
+        <div class="filter-chips" role="tablist" aria-label="Document filters">
+          <button class="chip is-active" data-filter="all" type="button">All</button>
+          <button class="chip" data-filter="overview" type="button">Overview</button>
+          <button class="chip" data-filter="policy" type="button">Policy</button>
+          <button class="chip" data-filter="milestone" type="button">Milestones</button>
+          <button class="chip" data-filter="submission" type="button">Submission</button>
+          <button class="chip" data-filter="starred" type="button">Starred</button>
+        </div>
+        <button class="surprise-btn" id="surprise-btn" type="button">Surprise me</button>
+      </div>
+
+      <label class="search-wrap" for="doc-search">
+        <span>Quick search (press <kbd>/</kbd>)</span>
+        <input id="doc-search" type="search" placeholder="Search by title or file name">
+      </label>
+
+      <div class="doc-list" aria-label="Capstone 1 documents">
+        <article class="doc-card reveal delay-1" data-id="intro" data-type="overview" data-keywords="introduction orientation overview">
+          <button class="star-btn" type="button" aria-label="Star Introduction">☆</button>
+          <span class="doc-kicker">Overview</span>
+          <h3>Introduction</h3>
+          <p>DVA_Captsone_1_Introduction_v1.pdf</p>
+          <a class="doc-open" href="https://drive.google.com/" target="_blank" rel="noopener noreferrer">Open resource</a>
+        </article>
+
+        <article class="doc-card reveal delay-2" data-id="handbook" data-type="policy" data-keywords="rules policy handbook structure">
+          <button class="star-btn" type="button" aria-label="Star Student Handbook">☆</button>
+          <span class="doc-kicker">Policy</span>
+          <h3>Student Handbook</h3>
+          <p>DVA_Capstone_1_StudentHandbook_v1.pdf</p>
+          <a class="doc-open" href="https://drive.google.com/" target="_blank" rel="noopener noreferrer">Open resource</a>
+        </article>
+
+        <article class="doc-card reveal delay-3" data-id="gate1" data-type="milestone" data-keywords="gate 1 milestone checklist">
+          <button class="star-btn" type="button" aria-label="Star Gate 1 Guide">☆</button>
+          <span class="doc-kicker">Milestone</span>
+          <h3>Gate 1 Guide</h3>
+          <p>DVA_Captsone_1_Gate_1_v1.pdf</p>
+          <a class="doc-open" href="https://drive.google.com/" target="_blank" rel="noopener noreferrer">Open resource</a>
+        </article>
+
+        <article class="doc-card reveal delay-4" data-id="ppt" data-type="submission" data-keywords="ppt presentation outline slides">
+          <button class="star-btn" type="button" aria-label="Star PPT Outline">☆</button>
+          <span class="doc-kicker">Submission</span>
+          <h3>PPT Outline</h3>
+          <p>DVA_Captsone_1_PPT_Outline_v1.pdf</p>
+          <a class="doc-open" href="https://drive.google.com/" target="_blank" rel="noopener noreferrer">Open resource</a>
+        </article>
+
+        <article class="doc-card reveal delay-5" data-id="report" data-type="submission" data-keywords="project report final submission">
+          <button class="star-btn" type="button" aria-label="Star Project Report">☆</button>
+          <span class="doc-kicker">Submission</span>
+          <h3>Project Report</h3>
+          <p>DVA_Captsone_1_Project_Report_v1.pdf</p>
+          <a class="doc-open" href="https://drive.google.com/" target="_blank" rel="noopener noreferrer">Open resource</a>
+        </article>
+      </div>
+
+      <p class="tiny-note" id="search-status" aria-live="polite"></p>
+    </section>
+
+    <section class="card reveal" id="sections" data-section>
+      <div class="card-head">
+        <h2>Class Sections & Team Finder</h2>
+        <p class="help">Search by Group number, Enrollment No, or Name.</p>
+      </div>
+
+      <div class="section-links" aria-label="Section filters">
+        <button class="section-link" data-team-section="A" type="button">DVA-Section-A</button>
+        <button class="section-link" data-team-section="B" type="button">DVA-Section-B</button>
+        <button class="section-link" data-team-section="C" type="button">DVA-Section-C</button>
+        <button class="section-link" data-team-section="D" type="button">DVA-Section-D</button>
+        <button class="section-link" data-team-section="E" type="button">DVA-Section-E</button>
+      </div>
+
+      <div class="team-finder">
+        <div class="finder-top">
+          <button class="command-btn mini" id="focus-team-search" type="button">Team Finder <kbd>Ctrl</kbd><kbd>J</kbd></button>
+          <div class="filter-chips team-filter-chips is-collapsed" id="team-filter-chips" role="tablist" aria-label="Section filters">
+            <button class="chip team-chip is-active" data-team-filter="all" type="button">All Sections</button>
+            <button class="chip team-chip" data-team-filter="A" type="button">A</button>
+            <button class="chip team-chip" data-team-filter="B" type="button">B</button>
+            <button class="chip team-chip" data-team-filter="C" type="button">C</button>
+            <button class="chip team-chip" data-team-filter="D" type="button">D</button>
+            <button class="chip team-chip" data-team-filter="E" type="button">E</button>
+          </div>
+        </div>
+
+        <label class="search-wrap" for="team-search">
+          <span>Search team directory (Group / Enrollment / Name)</span>
+          <input id="team-search" type="search" placeholder="Example: G-12, 23BCE101, Ananya">
+        </label>
+
+        <ul class="team-results" id="team-results" aria-live="polite"></ul>
+        <p class="tiny-note" id="team-status"></p>
+      </div>
+
+      <p class="tiny-note">
+        Team Finder is powered by local CSV files in the <code>data/</code> folder.
+      </p>
+    </section>
+
+    <section class="card reveal activity-card" id="ready-check" data-section>
+      <div class="card-head">
+        <h2>Readiness Tracker</h2>
+        <p class="help">Tick items and track your team readiness.</p>
+      </div>
+      <div class="check-grid">
+        <label><input type="checkbox" class="ready-item"> Team formed and sector selected</label>
+        <label><input type="checkbox" class="ready-item"> Problem statement finalized</label>
+        <label><input type="checkbox" class="ready-item"> Dataset shortlisted</label>
+        <label><input type="checkbox" class="ready-item"> KPI list drafted</label>
+      </div>
+      <p class="progress-line">Progress: <strong id="ready-score">0/4 complete</strong></p>
+    </section>
+
+    <footer class="footer">
+      <p>Official Course Resource Hub • Data Visualization & Analytics • Capstone 1</p>
+      <p>Curated for NST DVA Cohort</p>
+      <p>Academic Year 2026</p>
+    </footer>
+  </main>
+
+  <dialog class="palette" id="palette">
+    <form method="dialog" class="palette-shell">
+      <div class="palette-head">
+        <input id="palette-input" type="search" placeholder="Jump to a section or document...">
+        <button class="palette-close" value="cancel">Esc</button>
+      </div>
+      <ul id="palette-list" class="palette-list"></ul>
+    </form>
+  </dialog>
+
+  <script src="data/team-directory.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
