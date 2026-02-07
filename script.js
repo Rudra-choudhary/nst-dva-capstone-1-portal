@@ -408,6 +408,7 @@ function getPaletteTargets() {
     { label: 'Go to Overview', action: () => jumpTo('#context') },
     { label: 'Go to Registration', action: () => jumpTo('#registration') },
     { label: 'Go to Documents', action: () => jumpTo('#documents') },
+    { label: 'Go to Datasets', action: () => jumpTo('#datasets') },
     { label: 'Go to Team Finder', action: () => jumpTo('#sections') },
     {
       label: 'Find team',

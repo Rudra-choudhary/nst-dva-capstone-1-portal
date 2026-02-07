@@ -632,6 +632,31 @@ h2 {
   box-shadow: 0 0 0 3px rgba(242, 114, 42, 0.16);
 }
 
+.dataset-links {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.dataset-link {
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 11px 12px;
+  background: #f7faff;
+  color: #173f7b;
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.dataset-link:hover,
+.dataset-link:focus-visible {
+  border-color: #2b65ab;
+  background: #eef5ff;
+}
+
 .section-links {
   margin-top: 12px;
   display: grid;
@@ -900,6 +925,10 @@ h2 {
     grid-template-columns: auto 1fr;
   }
 
+  .dataset-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .command-btn {
     grid-column: 1 / -1;
     width: fit-content;
@@ -919,7 +948,8 @@ h2 {
 @media (max-width: 760px) {
   .hero-grid,
   .doc-list,
-  .highlights {
+  .highlights,
+  .dataset-links {
     grid-template-columns: 1fr;
   }
 
