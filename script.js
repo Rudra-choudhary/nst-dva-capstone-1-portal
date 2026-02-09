@@ -22,6 +22,8 @@ const teamChips = Array.from(document.querySelectorAll('.team-chip'));
 const focusTeamSearchBtn = document.querySelector('#focus-team-search');
 const teamFilterChipsWrap = document.querySelector('#team-filter-chips');
 const sectionLinks = Array.from(document.querySelectorAll('.section-link[data-team-section]'));
+const themeToggle = document.querySelector('#theme-toggle');
+const THEME_KEY = 'dva_capstone_theme';
 
 const STAR_KEY = 'dva_capstone_starred';
 const CSV_SOURCES = [
@@ -36,6 +38,9 @@ let activeFilter = 'all';
 let activeTeamFilter = 'all';
 let starredSet = new Set();
 let teamDirectory = Array.isArray(window.__TEAM_DIRECTORY__) ? window.__TEAM_DIRECTORY__ : [];
+
+const READINESS_KEY = 'dva_capstone_readiness';
+
 
 const focusIdeas = [
   'Draft KPI definitions and map each KPI to a decision question.',
@@ -113,7 +118,26 @@ function setActiveChip(next) {
 function updateReadyScore() {
   const done = readyItems.filter((item) => item.checked).length;
   if (readyScore) readyScore.textContent = `${done}/${readyItems.length} complete`;
+  saveReadiness();
 }
+
+function saveReadiness() {
+  const state = readyItems.map(item => item.checked);
+  localStorage.setItem(READINESS_KEY, JSON.stringify(state));
+}
+
+function loadReadiness() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(READINESS_KEY) || '[]');
+    readyItems.forEach((item, index) => {
+      if (saved[index]) item.checked = true;
+    });
+    updateReadyScore(); // Update UI after loading
+  } catch (e) {
+    console.error('Failed to load readiness state', e);
+  }
+}
+
 
 function pickRandomDocument() {
   const visible = docCards.filter((card) => !card.classList.contains('is-hidden'));
@@ -463,13 +487,56 @@ function filterPalette() {
   renderPalette(next);
 }
 
+function initTheme() {
+  const saved = localStorage.getItem(THEME_KEY);
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (saved === 'dark' || (!saved && prefersDark)) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    updateThemeIcon(true);
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    updateThemeIcon(false);
+  }
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem(THEME_KEY, next);
+  updateThemeIcon(next === 'dark');
+}
+
+function updateThemeIcon(isDark) {
+  if (themeToggle) {
+    const sun = themeToggle.querySelector('.theme-icon-light');
+    const moon = themeToggle.querySelector('.theme-icon-dark');
+    if (sun && moon) {
+      sun.style.display = isDark ? 'none' : 'inline';
+      moon.style.display = isDark ? 'inline' : 'none';
+    }
+  }
+  updateLogo(isDark);
+}
+
+function updateLogo(isDark) {
+  const logo = document.querySelector('.brand-logo');
+  if (logo) {
+    logo.classList.toggle('is-dark', isDark);
+  }
+}
+
 loadStars();
+initTheme();
 syncStarsUI();
 activateReveals();
 activateSectionSpy();
 updateScrollProgress();
-updateReadyScore();
+updateScrollProgress();
+loadReadiness();
 applyDocFilters();
+
 applyTeamFilters();
 loadTeamDirectory();
 
@@ -523,6 +590,7 @@ for (const card of docCards) {
 }
 
 openPaletteBtn?.addEventListener('click', openPalette);
+themeToggle?.addEventListener('click', toggleTheme);
 paletteInput?.addEventListener('input', filterPalette);
 
 document.addEventListener('keydown', (event) => {

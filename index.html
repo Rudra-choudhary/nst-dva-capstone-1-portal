@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,9 +12,12 @@
   <link rel="apple-touch-icon" href="assets/nst-shield-logo.png?v=3">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=5">
 </head>
+
 <body>
   <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
   <div class="backdrop" aria-hidden="true"></div>
@@ -37,7 +41,13 @@
         <a href="#sections">Sections</a>
         <a href="#ready-check">Readiness</a>
       </nav>
-      <button class="command-btn" id="open-palette" type="button">Command Bar <kbd>Ctrl</kbd><kbd>K</kbd></button>
+      <div class="nav-actions">
+        <button class="command-btn" id="open-palette" type="button">Command Bar <kbd>Ctrl</kbd><kbd>K</kbd></button>
+        <button class="command-btn" id="theme-toggle" type="button" aria-label="Toggle theme">
+          <span class="theme-icon-light">☀️</span>
+          <span class="theme-icon-dark" style="display: none;">🌙</span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -53,7 +63,8 @@
       <p class="eyebrow">DVA (Data Visualization &amp; Analytics) Course</p>
       <h1>Capstone 1 <span>Command Center</span></h1>
       <p class="subtitle">
-        Designed as an industry-grade project workspace for student teams to go from raw datasets to decision-ready insights.
+        Designed as an industry-grade project workspace for student teams to go from raw datasets to decision-ready
+        insights.
       </p>
 
       <div class="hero-grid">
@@ -85,18 +96,23 @@
         <div class="context-copy">
           <p>
             This capstone project is designed as an industry style data analytics simulation where student teams solve
-            real world sectoral problems using structured data. The objective is to demonstrate end-to-end analytical capability,
-            not just tool usage or visualization skills. Teams are expected to think like professional analysts and convert
+            real world sectoral problems using structured data. The objective is to demonstrate end-to-end analytical
+            capability,
+            not just tool usage or visualization skills. Teams are expected to think like professional analysts and
+            convert
             raw data into decision oriented insights.
           </p>
           <p>
-            Each team will select a sector and a problem statement, then execute a complete analytics workflow that includes
+            Each team will select a sector and a problem statement, then execute a complete analytics workflow that
+            includes
             data understanding, cleaning, standardization, KPI design, exploratory analysis (trends/outliers),
-            statistical analysis (correlation, distribution, variability), dashboard creation, and recommendation building.
+            statistical analysis (correlation, distribution, variability), dashboard creation, and recommendation
+            building.
             The final output should clearly demonstrate structured thinking, analytical depth, and decision relevance.
           </p>
           <p>
-            This capstone is part of the Data Visualization course. Therefore, Google Sheets is the mandatory working platform
+            This capstone is part of the Data Visualization course. Therefore, Google Sheets is the mandatory working
+            platform
             for cleaning, analysis, and dashboard creation.
           </p>
           <p>
@@ -107,7 +123,8 @@
           </p>
           <p>
             Optional Support: Students may use Python for supporting analysis (e.g., complex statistical grouping), but
-            it is not mandatory. SQL is not required. Evaluation will focus on analytical thinking and Google Sheets mastery,
+            it is not mandatory. SQL is not required. Evaluation will focus on analytical thinking and Google Sheets
+            mastery,
             not on tool complexity.
           </p>
         </div>
@@ -174,44 +191,59 @@
       </label>
 
       <div class="doc-list" aria-label="Capstone 1 documents">
-        <article class="doc-card reveal delay-1" data-id="intro" data-type="overview" data-keywords="introduction orientation overview">
+        <article class="doc-card reveal delay-1" data-id="intro" data-type="overview"
+          data-keywords="introduction orientation overview">
           <button class="star-btn" type="button" aria-label="Star Introduction">☆</button>
           <span class="doc-kicker">Overview</span>
           <h3>Introduction</h3>
           <p>DVA_Captsone_1_Introduction_v1.pdf</p>
-          <a class="doc-open" href="https://drive.google.com/file/d/1bNAnAhCIMqBdyY6HcHGFjErJc94QrVqg/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Open resource</a>
+          <a class="doc-open"
+            href="https://drive.google.com/file/d/1bNAnAhCIMqBdyY6HcHGFjErJc94QrVqg/view?usp=drive_link" target="_blank"
+            rel="noopener noreferrer">Open resource</a>
         </article>
 
-        <article class="doc-card reveal delay-2" data-id="handbook" data-type="policy" data-keywords="rules policy handbook structure">
+        <article class="doc-card reveal delay-2" data-id="handbook" data-type="policy"
+          data-keywords="rules policy handbook structure">
           <button class="star-btn" type="button" aria-label="Star Student Handbook">☆</button>
           <span class="doc-kicker">Policy</span>
           <h3>Student Handbook</h3>
           <p>DVA_Capstone_1_StudentHandbook_v1.pdf</p>
-          <a class="doc-open" href="https://drive.google.com/file/d/19TxJ5MS3vL74dkeyjKISxHq4rlxpas3m/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Open resource</a>
+          <a class="doc-open"
+            href="https://drive.google.com/file/d/19TxJ5MS3vL74dkeyjKISxHq4rlxpas3m/view?usp=drive_link" target="_blank"
+            rel="noopener noreferrer">Open resource</a>
         </article>
 
-        <article class="doc-card reveal delay-3" data-id="gate1" data-type="milestone" data-keywords="gate 1 milestone checklist">
+        <article class="doc-card reveal delay-3" data-id="gate1" data-type="milestone"
+          data-keywords="gate 1 milestone checklist">
           <button class="star-btn" type="button" aria-label="Star Gate 1 Guide">☆</button>
           <span class="doc-kicker">Milestone</span>
           <h3>Gate 1 Guide</h3>
           <p>DVA_Captsone_1_Gate_1_v1.pdf</p>
-          <a class="doc-open" href="https://drive.google.com/file/d/1xG_2tv4tR3VBC0ZkuolkuhUprYkO5h8M/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Open resource</a>
+          <a class="doc-open"
+            href="https://drive.google.com/file/d/1xG_2tv4tR3VBC0ZkuolkuhUprYkO5h8M/view?usp=drive_link" target="_blank"
+            rel="noopener noreferrer">Open resource</a>
         </article>
 
-        <article class="doc-card reveal delay-4" data-id="ppt" data-type="submission" data-keywords="ppt presentation outline slides">
+        <article class="doc-card reveal delay-4" data-id="ppt" data-type="submission"
+          data-keywords="ppt presentation outline slides">
           <button class="star-btn" type="button" aria-label="Star PPT Outline">☆</button>
           <span class="doc-kicker">Submission</span>
           <h3>PPT Outline</h3>
           <p>DVA_Captsone_1_PPT_Outline_v1.pdf</p>
-          <a class="doc-open" href="https://drive.google.com/file/d/1ghmtdMTZ-N0gXL0Ep1Kumgu493FDkMV5/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Open resource</a>
+          <a class="doc-open"
+            href="https://drive.google.com/file/d/1ghmtdMTZ-N0gXL0Ep1Kumgu493FDkMV5/view?usp=drive_link" target="_blank"
+            rel="noopener noreferrer">Open resource</a>
         </article>
 
-        <article class="doc-card reveal delay-5" data-id="report" data-type="submission" data-keywords="project report final submission">
+        <article class="doc-card reveal delay-5" data-id="report" data-type="submission"
+          data-keywords="project report final submission">
           <button class="star-btn" type="button" aria-label="Star Project Report">☆</button>
           <span class="doc-kicker">Submission</span>
           <h3>Project Report</h3>
           <p>DVA_Captsone_1_Project_Report_v1.pdf</p>
-          <a class="doc-open" href="https://drive.google.com/file/d/1Eyv2Qicygl2I4rj3CRFDcx4ojmC6ZaL8/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Open resource</a>
+          <a class="doc-open"
+            href="https://drive.google.com/file/d/1Eyv2Qicygl2I4rj3CRFDcx4ojmC6ZaL8/view?usp=drive_link" target="_blank"
+            rel="noopener noreferrer">Open resource</a>
         </article>
       </div>
 
@@ -225,21 +257,32 @@
       </div>
 
       <div class="dataset-links" aria-label="Dataset source links">
-        <a class="dataset-link" href="https://datasetsearch.research.google.com/" target="_blank" rel="noopener noreferrer">Google Dataset Search</a>
+        <a class="dataset-link" href="https://datasetsearch.research.google.com/" target="_blank"
+          rel="noopener noreferrer">Google Dataset Search</a>
         <a class="dataset-link" href="https://data.world/" target="_blank" rel="noopener noreferrer">data.world</a>
         <a class="dataset-link" href="https://www.openml.org/" target="_blank" rel="noopener noreferrer">OpenML</a>
-        <a class="dataset-link" href="https://data.humdata.org/" target="_blank" rel="noopener noreferrer">Humanitarian Data Exchange</a>
-        <a class="dataset-link" href="https://archive.ics.uci.edu/" target="_blank" rel="noopener noreferrer">UCI ML Repository</a>
-        <a class="dataset-link" href="https://dataverse.harvard.edu/" target="_blank" rel="noopener noreferrer">Harvard Dataverse</a>
-        <a class="dataset-link" href="https://www.data.gov.in/" target="_blank" rel="noopener noreferrer">Data.gov.in</a>
-        <a class="dataset-link" href="https://www.kaggle.com/datasets" target="_blank" rel="noopener noreferrer">Kaggle Datasets</a>
-        <a class="dataset-link" href="https://survey.stackoverflow.co/" target="_blank" rel="noopener noreferrer">Stack Overflow Survey</a>
-        <a class="dataset-link" href="https://microdata.worldbank.org/catalog/" target="_blank" rel="noopener noreferrer">World Bank Microdata</a>
+        <a class="dataset-link" href="https://data.humdata.org/" target="_blank" rel="noopener noreferrer">Humanitarian
+          Data Exchange</a>
+        <a class="dataset-link" href="https://archive.ics.uci.edu/" target="_blank" rel="noopener noreferrer">UCI ML
+          Repository</a>
+        <a class="dataset-link" href="https://dataverse.harvard.edu/" target="_blank" rel="noopener noreferrer">Harvard
+          Dataverse</a>
+        <a class="dataset-link" href="https://www.data.gov.in/" target="_blank"
+          rel="noopener noreferrer">Data.gov.in</a>
+        <a class="dataset-link" href="https://www.kaggle.com/datasets" target="_blank" rel="noopener noreferrer">Kaggle
+          Datasets</a>
+        <a class="dataset-link" href="https://survey.stackoverflow.co/" target="_blank" rel="noopener noreferrer">Stack
+          Overflow Survey</a>
+        <a class="dataset-link" href="https://microdata.worldbank.org/catalog/" target="_blank"
+          rel="noopener noreferrer">World Bank Microdata</a>
         <a class="dataset-link" href="https://figshare.com/" target="_blank" rel="noopener noreferrer">Figshare</a>
         <a class="dataset-link" href="https://datahub.io/" target="_blank" rel="noopener noreferrer">DataHub</a>
-        <a class="dataset-link" href="https://cseweb.ucsd.edu/~jmcauley/datasets.html#amazon_reviews" target="_blank" rel="noopener noreferrer">Amazon Reviews (UCSD)</a>
-        <a class="dataset-link" href="https://nijianmo.github.io/amazon/index.html" target="_blank" rel="noopener noreferrer">Amazon Product Data</a>
-        <a class="dataset-link" href="https://business.yelp.com/data/resources/open-dataset/" target="_blank" rel="noopener noreferrer">Yelp Open Dataset</a>
+        <a class="dataset-link" href="https://cseweb.ucsd.edu/~jmcauley/datasets.html#amazon_reviews" target="_blank"
+          rel="noopener noreferrer">Amazon Reviews (UCSD)</a>
+        <a class="dataset-link" href="https://nijianmo.github.io/amazon/index.html" target="_blank"
+          rel="noopener noreferrer">Amazon Product Data</a>
+        <a class="dataset-link" href="https://business.yelp.com/data/resources/open-dataset/" target="_blank"
+          rel="noopener noreferrer">Yelp Open Dataset</a>
       </div>
     </section>
 
@@ -259,8 +302,10 @@
 
       <div class="team-finder">
         <div class="finder-top">
-          <button class="command-btn mini" id="focus-team-search" type="button">Team Finder <kbd>Ctrl</kbd><kbd>J</kbd></button>
-          <div class="filter-chips team-filter-chips is-collapsed" id="team-filter-chips" role="tablist" aria-label="Section filters">
+          <button class="command-btn mini" id="focus-team-search" type="button">Team Finder
+            <kbd>Ctrl</kbd><kbd>J</kbd></button>
+          <div class="filter-chips team-filter-chips is-collapsed" id="team-filter-chips" role="tablist"
+            aria-label="Section filters">
             <button class="chip team-chip is-active" data-team-filter="all" type="button">All Sections</button>
             <button class="chip team-chip" data-team-filter="A" type="button">A</button>
             <button class="chip team-chip" data-team-filter="B" type="button">B</button>
@@ -318,4 +363,5 @@
   <script src="data/team-directory.js"></script>
   <script src="script.js?v=5"></script>
 </body>
+
 </html>
